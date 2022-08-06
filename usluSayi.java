@@ -6,17 +6,12 @@ import java.util.Scanner;
 
 public class usluSayi {
     static int recursive(int a, int b) {
-        int temp = a;
         
-        if (b == 0) {
+        if (b == 0)
             return 1;
-        } else {
-            for (int i = 1; i < b ; i++) {
-                a *= temp;
-            }
-        }
-
-        return a;
+        b--;
+        
+        return recursive(a,b) *a;
     }
 
     public static void main(String[] args) {
